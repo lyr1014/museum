@@ -6,26 +6,79 @@
     <title>wamuseum</title>
   </head>
   <body>
+    <button id="pagebutton" onclick="contentshow()">出菜单</button>
     <section id="one">
-        <button onclick="changeto()">切网址</button>
+
+    </section>
+    <section id="two">
     </section>
     <section id="three">
         <iframe style="height: 100vh;width:100vw;border: transparent;"  src="https://www.720yun.com/vr/25c22urvybr"></iframe>
     </section>
+    <section id="four">
+
+    </section>
+    <section id="five">
+       <p onclick="changeto('one')">1</p>
+       <p onclick="changeto('two')">2</p>
+       <p onclick="changeto('three')">3</p>
+       <p onclick="changeto('four')">4</p>
+    </section>
     <script>
-        function changeto(){
-            document.getElementById("three").style.display="block";
-            document.getElementById("one").style.display="none";
+        function contentshow(){
+            document.getElementById("five").style.display="block";
+        }
+        function changeto(pageID){
+            console.log(pageID )
+            document.getElementById(pageID).style.display="block";
+            const sectionID=['one','two','three','four']
+            sectionID.forEach(item=>{
+                if(item!=pageID){
+                    document.getElementById(item).style.display="none";
+                }
+            })
+            document.getElementById("five").style.display="none";
         }
     </script>
   </body>
   <style>
+    #pagebutton{
+      position:absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 998;
+    }
+    #two{
+      background-color: aqua;
+    }
+    #four{
+      background-color: rgb(78, 160, 188);
+    }
+    #five p{
+      width: 60vw;
+      height: 10vh;
+      background-color: rgb(235, 166, 88);
+    }
+    #five{
+      display: none;
+      width: 60vw;
+      height: 100vh;
+      background-color: wheat;
+      position: absolute;
+      top:0;
+      left: 0;
+      z-index: 999;
+    }
     #three{
         display: none;
     }
     section{
       height: 100vh;
       width:100vw;
+    }
+    html,body{
+      padding: 0;
+      margin: 0;
     }
   </style>
 </html>
