@@ -1,84 +1,182 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>wamuseum</title>
-  </head>
-  <body>
-    <button id="pagebutton" onclick="contentshow()">出菜单</button>
-    <section id="one">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wamuseum</title>
+  <link rel="stylesheet" href="./layui.css">
+</head>
+
+<body>
+  <div style="height: 100%;width:100vw;">
+    <img id="pagebutton" onclick="contentshow()" src="./contenticon.png"></img>
+    <section id="one">
+      <div class="layui-carousel" id="ID-carousel-demo-image">
+        <div carousel-item>
+          <div><img src="./back1.png"></div>
+          <div><img src="./back1.png"></div>
+          <div><img src="./back1.png"></div>
+          <div><img src="./back1.png"></div>
+          <div><img src="./back1.png"></div>
+        </div>
+      </div>
     </section>
     <section id="two">
+      <div class="list0" style="position: absolute;height: 100vh;width:100vw;top:0;left:0;z-index: 1;overflow-x: auto;">
+        <img class="listimg1" src="./back1.png" style="height: 100vh;width:150vw;">
+      </div>
+
+      <!-- <img class="listimg2" v-show="listimg2" src="/public/history1.jpg" style="position: absolute;height: 100vh;width:100vw;top:0;right:0;z-index: 1;"> -->
+      <div class="list1"
+        style="position: absolute;height: 20vh;width:100vw;top:0;left:0;z-index: 2; background-color: black;opacity: 0.8;">
+      </div>
+      <img onclick="changehistory(0)" class="listicon" src="./MGL-R4.png" style="left:0">
+      <img onclick="changehistory(1)" class="listicon" src="./MGL-R4.png" style="left:20vw">
+      <img onclick="changehistory(2)" class="listicon" src="./MGL-R4.png" style="left:40vw">
+      <img onclick="changehistory(3)" class="listicon" src="./MGL-R4.png" style="left:60vw">
+      <img onclick="changehistory(4)" class="listicon" src="./MGL-R4.png" style="left:80vw">
+      <div class="list2" style="position: absolute;height: 30vh;width:100vw;top:20vh;left:0;z-index: 0;">
+      </div>
+      <div class="list3"
+        style="position: absolute;height: 50vh;width:100vw;top:50vh;left:0;z-index: 2;background-color: black;opacity: 0.8;">
+      </div>
+      <div class="list30" style="position: absolute;height: 50vh;width:100vw;top:50vh;left:0;z-index: 3;">
+        <p id="hisname" style="font-size: 3vh;padding-top: 10vh;text-align: end;font-family: SimSun;color: white;">
+          《淮南子·览冥训》 </p>
+        <pre id="hiscontainer"
+          style="font-size: 2vh;padding-top: 5vh;text-align: end;font-family: SimSun;color: white;line-height: 3vh;">“ 于是女娲炼五色石以补苍天，断鳌足以立四极，<br>杀黑龙以济冀州，积芦灰以止淫水。 ”</pre>
+      </div>
     </section>
     <section id="three">
-        <iframe style="height: 100vh;width:100vw;border: transparent;"  src="https://www.720yun.com/vr/25c22urvybr"></iframe>
+      <iframe style="height: 100vh;width:100vw;border: transparent;"
+        src="https://www.720yun.com/vr/25c22urvybr"></iframe>
     </section>
     <section id="four">
 
     </section>
     <section id="five">
-       <p onclick="changeto('one')">1</p>
-       <p onclick="changeto('two')">2</p>
-       <p onclick="changeto('three')">3</p>
-       <p onclick="changeto('four')">4</p>
+      <p onclick="changeto('one')">1</p>
+      <p onclick="changeto('two')">2</p>
+      <p onclick="changeto('three')">3</p>
+      <p onclick="changeto('four')">4</p>
     </section>
-    <script>
-        function contentshow(){
-            document.getElementById("five").style.display="block";
+  </div>
+  <script src="./layui.js"></script>
+  <script>
+    const historyName = ["《淮南子·览冥训》", "《列子·汤问》", "《论衡·谈天篇》", "《三皇本纪》", "《天外来客---陨石收藏录》"];
+    const historyContainer = ["于是女娲炼五色石以补苍天，断鳌足以立四极，\n杀黑龙以济冀州，积芦灰以止淫水。", "物有不足，故昔者女娲氏炼五色石以补其阙；\n断鳌之足以立四极。", "女娲炼五色石以补苍天，断鳌足以立四极。", "诸侯有共工氏，任智刑以强，\n霸而不王，以水乘木，乃与祝融战，不胜而怒，\n乃头触不周山崩，天柱折，地维缺。", "幸得女娲补天于高山之巅，\n羲和浴日于东海之滨，救得万众生灵。"];
+    function contentshow() {
+      document.getElementById("five").style.display = "block";
+    }
+    function changehistory(index) {
+      document.getElementById("hisname").innerHTML = historyName[index];
+      document.getElementById("hiscontainer").innerHTML = "\“ " + historyContainer[index] + "\” ";
+    }
+    function changeto(pageID) {
+      console.log(pageID)
+      document.getElementById(pageID).style.display = "block";
+      const sectionID = ['one', 'two', 'three', 'four']
+      sectionID.forEach(item => {
+        if (item != pageID) {
+          document.getElementById(item).style.display = "none";
         }
-        function changeto(pageID){
-            console.log(pageID )
-            document.getElementById(pageID).style.display="block";
-            const sectionID=['one','two','three','four']
-            sectionID.forEach(item=>{
-                if(item!=pageID){
-                    document.getElementById(item).style.display="none";
-                }
-            })
-            document.getElementById("five").style.display="none";
-        }
-    </script>
-  </body>
-  <style>
-    #pagebutton{
-      position:absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 998;
+      })
+      document.getElementById("five").style.display = "none";
     }
-    #two{
-      background-color: aqua;
+    layui.use(function () {
+      var carousel = layui.carousel;
+      carousel.render({
+        elem: '#ID-carousel-demo-image',
+        width: 100 + "vw",
+        height: 100 + 'vh',
+        interval: 3000,
+        backgroundSize: 'cover',
+      });
+    });
+  </script>
+</body>
+<style>
+  section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 996;
+  }
+
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  #pagebutton {
+    position: absolute;
+    z-index: 998;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    /* height: 5vh; */
+  }
+
+  #two {
+    display: none;
+    background-color: aqua;
+  }
+
+  .listimg1 {
+    animation: slidein 20s 0s infinite;
+  }
+
+  @keyframes slidein {
+    0% {
+      transform: translateX(0%);
     }
-    #four{
-      background-color: rgb(78, 160, 188);
+
+    50% {
+      transform: translateX(-30%);
     }
-    #five p{
-      width: 60vw;
-      height: 10vh;
-      background-color: rgb(235, 166, 88);
+
+    100% {
+      transform: translateX(0%);
     }
-    #five{
-      display: none;
-      width: 60vw;
-      height: 100vh;
-      background-color: wheat;
-      position: absolute;
-      top:0;
-      left: 0;
-      z-index: 999;
-    }
-    #three{
-        display: none;
-    }
-    section{
-      height: 100vh;
-      width:100vw;
-    }
-    html,body{
-      padding: 0;
-      margin: 0;
-    }
-  </style>
+  }
+
+  .listicon {
+    position: absolute;
+    width: 8vw;
+    padding: 0 6vw;
+    top: 10vh;
+    z-index: 3;
+  }
+
+  #three {
+    display: none;
+  }
+
+  #four {
+    display: none;
+    background-color: rgb(78, 160, 188);
+  }
+
+  #five p {
+    width: 60vw;
+    height: 10vh;
+    background-color: rgb(235, 166, 88);
+  }
+
+  #five {
+    display: none;
+    width: 60vw;
+    height: 100vh;
+    background-color: wheat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+</style>
+
 </html>
