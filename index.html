@@ -14,13 +14,16 @@
     <section id="one">
       <div class="layui-carousel" id="ID-carousel-demo-image">
         <div carousel-item>
-          <div><img src="./back1.png"></div>
-          <div><img src="./back1.png"></div>
-          <div><img src="./back1.png"></div>
-          <div><img src="./back1.png"></div>
-          <div><img src="./back1.png"></div>
+          <div><img src="./pic/pic1.jpg"></div>
+          <div><img src="./pic/pic2.jpg"></div>
+          <div><img src="./pic/pic3.jpg"></div>
+          <div><img src="./pic/pic4.jpg"></div>
+          <div><img src="./pic/pic5.jpg"></div>
         </div>
       </div>
+      <!-- <div id="onetext">
+         <p>6寸云母茶晶黄套兰龙扁瓶</p>
+      </div> -->
     </section>
     <section id="two">
       <div class="list0" style="position: absolute;height: 100vh;width:100vw;top:0;left:0;z-index: 1;overflow-x: auto;">
@@ -53,13 +56,71 @@
         src="https://www.720yun.com/vr/25c22urvybr"></iframe>
     </section>
     <section id="four">
-
+      <div class="introtitle">
+        <p>关于我们</p>
+      </div>
+      <div class="introright intro">
+        <div class="introtext">
+          <p>叶隽洁<br>华东师范大学设计学院<br>3D展馆主要建设者</p>
+        </div>
+        <div class="introimg">
+          <img src="./Y.png">
+        </div>
+      </div>
+      <div class="introleft intro">
+        <div class="introimg">
+          <img src="./toto.jpg">
+        </div>
+        <div class="introtext">
+          <p>叶隽洁<br>华东师范大学设计学院<br>3D展馆主要建设者</p>
+        </div>
+      </div>
+      <div class="introright intro">
+        <div class="introtext">
+          <p>叶隽洁<br>华东师范大学设计学院<br>3D展馆主要建设者</p>
+        </div>
+        <div class="introimg">
+          <img src="./lyr.jpg">
+        </div>
+      </div>
+      <div class="introleft intro">
+        <div class="introimg">
+          <img src="./ww.jpg">
+        </div>
+        <div class="introtext">
+          <p>叶隽洁<br>华东师范大学设计学院<br>3D展馆主要建设者</p>
+        </div>
+      </div>
+      <div class="introright intro">
+        <div class="introtext">
+          <p>叶隽洁<br>华东师范大学设计学院<br>3D展馆主要建设者</p>
+        </div>
+        <div class="introimg">
+          <img src="./Y.png">
+        </div>
+      </div>
+      <div class="introleft intro">
+        <div class="introimg">
+          <img src="./toto.jpg">
+        </div>
+        <div class="introtext">
+          <p>叶隽洁<br>华东师范大学设计学院<br>3D展馆主要建设者</p>
+        </div>
+      </div>
+      <div class="introtitle">
+           <p><strong>合作单位</strong><br>
+           XXXXXXXXXXXX</p>
+      </div>
     </section>
     <section id="five">
-      <p onclick="changeto('one')">1</p>
-      <p onclick="changeto('two')">2</p>
-      <p onclick="changeto('three')">3</p>
-      <p onclick="changeto('four')">4</p>
+      <div id="five_1">
+        <p onclick="changeto('one')">主界面</p>
+        <p onclick="changeto('two')">文献记录</p>
+        <p onclick="changeto('three')">馆内漫游</p>
+        <p onclick="changeto('four')">团队介绍</p>
+      </div>
+
+      <img id="closeButton" onclick="closeButton()" src="./closeicon.png">
     </section>
   </div>
   <script src="./layui.js"></script>
@@ -72,6 +133,9 @@
     function changehistory(index) {
       document.getElementById("hisname").innerHTML = historyName[index];
       document.getElementById("hiscontainer").innerHTML = "\“ " + historyContainer[index] + "\” ";
+    }
+    function closeButton() {
+      document.getElementById("five").style.display = "none";
     }
     function changeto(pageID) {
       console.log(pageID)
@@ -88,22 +152,22 @@
       var carousel = layui.carousel;
       carousel.render({
         elem: '#ID-carousel-demo-image',
-        width: 100 + "vw",
-        height: 100 + 'vh',
-        interval: 3000,
-        backgroundSize: 'cover',
+        width:100+'vw',
+        height:100+'vh',
+        interval: 5000,
       });
     });
   </script>
 </body>
 <style>
-  section {
+
+  #section1,#section2,#section3,#section5 {
     position: absolute;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
-    z-index: 996;
+    z-index: 5;
   }
 
   html,
@@ -114,11 +178,32 @@
 
   #pagebutton {
     position: absolute;
-    z-index: 998;
+    z-index: 900;
     top: 10px;
     left: 10px;
     width: 50px;
     /* height: 5vh; */
+  }
+  #one{
+    /* background-color: aqua; */
+  }
+  #onetext{
+    position: absolute;
+    width: 100vw;
+    z-index: 6;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:60vh;
+    color: white;
+    font: 2em sans-serif;
+    left: 0;
+  }
+  #ID-carousel-demo-image img{
+    width:100vw !important;
+    /* height: 100vh !important;  */
+    background-size: cover !important;
   }
 
   #two {
@@ -158,24 +243,131 @@
 
   #four {
     display: none;
-    background-color: rgb(78, 160, 188);
+    /* background-color: rgb(0, 0, 0); */
+    background-image: url('./back1.png');
+    background-size: cover;
   }
 
+  .intro {
+    height: 15vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 1);
+    margin-bottom: 1vh;
+  }
+  .introtitle{
+    width: 100vw;
+    height: 20vh;
+    text-align: center;
+    font-size: 3vh;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    margin-bottom: 1vh;
+  }
+
+  .introimg {
+    width: 35vw;
+    height: 15vh;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .introtext {
+    width: 65vw;
+    height: 15vh;
+    float: left;
+    color: white;
+    font-family:Simsun;
+    font-size: 2vh;
+    line-height: 3vh;
+    text-align: center;
+  }
+
+  .introleft img {
+    height: 70%;
+    border-radius:50%;
+  }
+
+  .introright img {
+    height: 70%;
+    border-radius:50%;
+  }
+
+  .introleft .introtext {
+    display: flex;
+    align-items: center;
+  }
+
+  .introright .introtext {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  /* <div class="introleft intro">
+        <img class="introimg">
+        <p class="introtext"></p>
+      </div>
+      <div class="introright intro">
+        <p class="introtext"></p>
+        <img class="introimg">
+      </div>
+      <div class="introleft intro">
+         <img class="introimg">
+         <p class="introtext"></p>
+      </div> */
   #five p {
     width: 60vw;
-    height: 10vh;
-    background-color: rgb(235, 166, 88);
+    height: 3vh;
+    background-color: transparent;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(225, 154, 47, 0.534);
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 3vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    font-family: Simsun;
+    position: relative;
+    z-index: 1200;
+  }
+
+  #five p:first-child {
+    padding-top: 25vh;
   }
 
   #five {
     display: none;
     width: 60vw;
     height: 100vh;
-    background-color: wheat;
+    /* background-color: rgba(0, 0, 0, 0.9); */
+    background-image: url('./back1.png');
     position: absolute;
     top: 0;
     left: 0;
     z-index: 999;
+  }
+
+  #five_1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  #closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    z-index: 1200;
   }
 </style>
 
