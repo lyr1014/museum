@@ -27,33 +27,37 @@
     </section>
     <section id="two">
       <div class="list0" style="position: absolute;height: 100vh;width:100vw;top:0;left:0;z-index: 1;overflow-x: auto;">
-        <img class="listimg1" src="./back1.png" style="height: 100vh;width:150vw;">
+        <img id="listimg" class="listimg1" src="./pic/picone.png" style="height: 100vh;">
       </div>
 
       <!-- <img class="listimg2" v-show="listimg2" src="/public/history1.jpg" style="position: absolute;height: 100vh;width:100vw;top:0;right:0;z-index: 1;"> -->
       <div class="list1"
-        style="position: absolute;height: 20vh;width:100vw;top:0;left:0;z-index: 2; background-color: black;opacity: 0.8;">
+        style="position: absolute;height: 15vh;width:100vw;top:0;left:0;z-index: 2; background-color: black;opacity: 0.8;">
       </div>
       <img onclick="changehistory(0)" class="listicon" src="./MGL-R4.png" style="left:0">
-      <img onclick="changehistory(1)" class="listicon" src="./MGL-R4.png" style="left:20vw">
-      <img onclick="changehistory(2)" class="listicon" src="./MGL-R4.png" style="left:40vw">
-      <img onclick="changehistory(3)" class="listicon" src="./MGL-R4.png" style="left:60vw">
-      <img onclick="changehistory(4)" class="listicon" src="./MGL-R4.png" style="left:80vw">
+      <img onclick="changehistory(1)" class="listicon" src="./MGL-R4.png" style="left:25vw">
+      <img onclick="changehistory(2)" class="listicon" src="./MGL-R4.png" style="left:50vw">
+      <img onclick="changehistory(3)" class="listicon" src="./MGL-R4.png" style="left:75vw">
+      <!-- <img onclick="changehistory(4)" class="listicon" src="./MGL-R4.png" style="left:80vw"> -->
       <div class="list2" style="position: absolute;height: 30vh;width:100vw;top:20vh;left:0;z-index: 0;">
       </div>
       <div class="list3"
-        style="position: absolute;height: 50vh;width:100vw;top:50vh;left:0;z-index: 2;background-color: black;opacity: 0.8;">
+        style="position: absolute;height:10vh;width:100vw;top:90vh;left:0;z-index: 2;background-color: black;opacity: 0.8;">
       </div>
-      <div class="list30" style="position: absolute;height: 50vh;width:100vw;top:50vh;left:0;z-index: 3;">
-        <p id="hisname" style="font-size: 3vh;padding-top: 10vh;text-align: end;font-family: SimSun;color: white;">
-          《淮南子·览冥训》 </p>
-        <pre id="hiscontainer"
-          style="font-size: 2vh;padding-top: 5vh;text-align: end;font-family: SimSun;color: white;line-height: 3vh;">“ 于是女娲炼五色石以补苍天，断鳌足以立四极，<br>杀黑龙以济冀州，积芦灰以止淫水。 ”</pre>
+      <div class="list30" style="position: absolute;height: 10vh;width:100vw;top:90vh;left:0;z-index: 3;">
+        <p id="hisname" style="font-size: 4vh;text-align: center; padding-top: 2vh;padding-bottom: 2vh; text-align: center;font-family: LiSu; font-weight: bold; color: white;">
+          河南淮阳泥泥狗 </p>
+        <!-- <pre id="hiscontainer"
+          style="font-size: 2vh;padding-top: 5vh;text-align: end;font-family: SimSun;color: white;line-height: 3vh;">“ 于是女娲炼五色石以补苍天，断鳌足以立四极，<br>杀黑龙以济冀州，积芦灰以止淫水。 ”</pre> -->
       </div>
     </section>
     <section id="three">
-      <iframe style="height: 100vh;width:100vw;border: transparent;"
-        src="https://www.720yun.com/vr/25c22urvybr"></iframe>
+      <!-- <iframe style="height: 100vh;width:100vw;border: transparent;"
+        src="https://www.720yun.com/vr/25c22urvybr"></iframe> -->
+        <div id="three1" style="padding: 5vw; margin-top: 20vh;">
+          <video src="./pic/定版视屏.mp4" width="100%" controls="controls" poster="images\t3.jpg"></video> 
+        </div>
+       
     </section>
     <section id="four">
       <div class="introtitle">
@@ -61,23 +65,7 @@
       </div>
       <div class="introright intro">
         <div class="introtext">
-          <p>叶隽洁<br>华东师范大学设计学院<br>3D展馆主要建设者</p>
-        </div>
-        <div class="introimg">
-          <img src="./Y.png">
-        </div>
-      </div>
-      <div class="introleft intro">
-        <div class="introimg">
-          <img src="./toto.jpg">
-        </div>
-        <div class="introtext">
-          <p>叶隽洁<br>华东师范大学设计学院<br>3D展馆主要建设者</p>
-        </div>
-      </div>
-      <div class="introright intro">
-        <div class="introtext">
-          <p>叶隽洁<br>华东师范大学设计学院<br>3D展馆主要建设者</p>
+          <p>李雅茹，女，2001.10—<br>华东师范大学地图学与地理信息系统专业在读硕士研究生<br>在项目中负责H5游戏与线上博物馆的前端页面设计、代码编辑、上线发布等</p>
         </div>
         <div class="introimg">
           <img src="./lyr.jpg">
@@ -88,34 +76,50 @@
           <img src="./ww.jpg">
         </div>
         <div class="introtext">
-          <p>叶隽洁<br>华东师范大学设计学院<br>3D展馆主要建设者</p>
+          <p>倪储祎，女，2000.11—<br>华东师范大学美术学院现当代艺术专业在读硕士研究生<br>在项目中负责H5游戏数字平面插画设计和制作等</p>
         </div>
       </div>
       <div class="introright intro">
         <div class="introtext">
-          <p>叶隽洁<br>华东师范大学设计学院<br>3D展馆主要建设者</p>
+          <p>尚咿彤，女，2001.11—<br>华东师范大学社会发展学院民俗学研究所在读硕士研究生<br>在项目中负责创意设计、内容产出，文案写作，海报制作等</p>
         </div>
         <div class="introimg">
-          <img src="./Y.png">
+          <img src="./toto.jpg">
         </div>
       </div>
       <div class="introleft intro">
         <div class="introimg">
-          <img src="./toto.jpg">
+          <img src="./wxx.jpg">
         </div>
         <div class="introtext">
-          <p>叶隽洁<br>华东师范大学设计学院<br>3D展馆主要建设者</p>
+          <p>王馨雪，女，2001.11—<br>华东师范大学社会发展学院民俗学研究所在读硕士研究生<br>在项目中负责项目设计、内容产出，文案写作，海报制作等</p>
+        </div>
+      </div>
+      <div class="introright intro">
+        <div class="introtext">
+          <p>谢圣心，女，1997.01—<br>华东师范大学社会发展学院民俗学研究所在读博士研究生<br>在项目中负责组织、创意设计、内容编辑、音效等</p>
+        </div>
+        <div class="introimg">
+          <img src="./ysx.jpg">
+        </div>
+      </div>
+      <div class="introleft intro">
+        <div class="introimg">
+          <img src="./Y.png">
+        </div>
+        <div class="introtext">
+          <p>叶隽洁，女，2000.02—<br>华东师范大学设计学院城市更新与环境设计专业在硕士研究生<br>在项目中负责博物馆虚拟展厅的空间建模、展陈设计、创意设计、3d展品生成、效果渲染等</p>
         </div>
       </div>
       <div class="introtitle">
-           <p><strong>合作单位</strong><br>
-           XXXXXXXXXXXX</p>
+        <p><strong>指导老师</strong><br>
+          田兆元、徐赣丽<br>王均霞、罗靓</p>
       </div>
     </section>
     <section id="five">
       <div id="five_1">
-        <p onclick="changeto('one')">主界面</p>
-        <p onclick="changeto('two')">文献记录</p>
+        <p onclick="changeto('one')">展品介绍</p>
+        <p onclick="changeto('two')">古今交织</p>
         <p onclick="changeto('three')">馆内漫游</p>
         <p onclick="changeto('four')">团队介绍</p>
       </div>
@@ -125,15 +129,19 @@
   </div>
   <script src="./layui.js"></script>
   <script>
-    const historyName = ["《淮南子·览冥训》", "《列子·汤问》", "《论衡·谈天篇》", "《三皇本纪》", "《天外来客---陨石收藏录》"];
-    const historyContainer = ["于是女娲炼五色石以补苍天，断鳌足以立四极，\n杀黑龙以济冀州，积芦灰以止淫水。", "物有不足，故昔者女娲氏炼五色石以补其阙；\n断鳌之足以立四极。", "女娲炼五色石以补苍天，断鳌足以立四极。", "诸侯有共工氏，任智刑以强，\n霸而不王，以水乘木，乃与祝融战，不胜而怒，\n乃头触不周山崩，天柱折，地维缺。", "幸得女娲补天于高山之巅，\n羲和浴日于东海之滨，救得万众生灵。"];
+    const historyName = ["河南淮阳泥泥狗", "山西面花", "荆州郢城泥陶", "山东博山琉璃"];
+    const historyContainer = ["./pic/picone.png", "./pic/pictwo.png", "./pic/picthree.png", "./pic/picfour.png"];
     function contentshow() {
       document.getElementById("five").style.display = "block";
     }
-    function changehistory(index) {
-      document.getElementById("hisname").innerHTML = historyName[index];
-      document.getElementById("hiscontainer").innerHTML = "\“ " + historyContainer[index] + "\” ";
-    }
+    // document.addEventListener('DOMContentLoaded', function () {
+      function changehistory(index) {
+        document.getElementById("hisname").innerHTML = historyName[index];
+        document.getElementById("listimg").src = historyContainer[index];
+        // document.getElementById("hiscontainer").innerHTML = "\“ " + historyContainer[index] + "\” ";
+      }
+    // });
+
     function closeButton() {
       document.getElementById("five").style.display = "none";
     }
@@ -152,8 +160,8 @@
       var carousel = layui.carousel;
       carousel.render({
         elem: '#ID-carousel-demo-image',
-        width:100+'vw',
-        height:100+'vh',
+        width: 100 + 'vw',
+        height: 100 + 'vh',
         interval: 5000,
       });
     });
@@ -161,7 +169,10 @@
 </body>
 <style>
 
-  #section1,#section2,#section3,#section5 {
+  #one,
+  #two,
+  #three,
+  #five {
     position: absolute;
     top: 0;
     left: 0;
@@ -184,10 +195,12 @@
     width: 50px;
     /* height: 5vh; */
   }
-  #one{
+
+  #one {
     /* background-color: aqua; */
   }
-  #onetext{
+
+  #onetext {
     position: absolute;
     width: 100vw;
     z-index: 6;
@@ -195,13 +208,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    top:60vh;
+    top: 60vh;
     color: white;
     font: 2em sans-serif;
     left: 0;
   }
-  #ID-carousel-demo-image img{
-    width:100vw !important;
+
+  #ID-carousel-demo-image img {
+    width: 100vw !important;
     /* height: 100vh !important;  */
     background-size: cover !important;
   }
@@ -220,10 +234,15 @@
       transform: translateX(0%);
     }
 
+    /* 25% {
+      transform: translateX(-40%);
+    } */
     50% {
-      transform: translateX(-30%);
+      transform: translateX(-60%);
     }
-
+    /* 75% {
+      transform: translateX(-40%);
+    } */
     100% {
       transform: translateX(0%);
     }
@@ -239,22 +258,38 @@
 
   #three {
     display: none;
+    /* height: 100%;
+    width: 100vw; */
+    /* background-color: black; */
+    background-image:url('./pic/back2.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #three1{
+    background-image:url('./pic/back2.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   }
 
   #four {
     display: none;
     /* background-color: rgb(0, 0, 0); */
-    background-image: url('./back1.png');
+    background-image: url('./pic/back2.png');
     background-size: cover;
+    font-family: LiSu;
   }
 
   .intro {
-    height: 15vh;
+    height: 20vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.5);
     margin-bottom: 1vh;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; 
   }
-  .introtitle{
+
+  .introtitle {
     width: 100vw;
     height: 20vh;
     text-align: center;
@@ -269,7 +304,7 @@
 
   .introimg {
     width: 35vw;
-    height: 15vh;
+    height: 20vh;
     float: left;
     display: flex;
     align-items: center;
@@ -278,23 +313,23 @@
 
   .introtext {
     width: 65vw;
-    height: 15vh;
+    height: 20vh;
     float: left;
     color: white;
-    font-family:Simsun;
+    font-family: LiSu;
     font-size: 2vh;
     line-height: 3vh;
     text-align: center;
   }
 
   .introleft img {
-    height: 70%;
-    border-radius:50%;
+    height: 60%;
+    border-radius: 50%;
   }
 
   .introright img {
-    height: 70%;
-    border-radius:50%;
+    height: 60%;
+    border-radius: 50%;
   }
 
   .introleft .introtext {
@@ -324,7 +359,7 @@
     width: 60vw;
     height: 3vh;
     background-color: transparent;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: rgb(255, 255, 255);
     border-bottom: 1px solid rgba(225, 154, 47, 0.534);
     background-color: rgba(0, 0, 0, 0);
@@ -332,9 +367,10 @@
     font-size: 3vh;
     padding-top: 3vh;
     padding-bottom: 3vh;
-    font-family: Simsun;
+    font-family: LiSu;
     position: relative;
     z-index: 1200;
+    letter-spacing: 2px;
   }
 
   #five p:first-child {
@@ -347,6 +383,8 @@
     height: 100vh;
     /* background-color: rgba(0, 0, 0, 0.9); */
     background-image: url('./back1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
